@@ -40,6 +40,10 @@ a:hover {
   text-decoration: none;
 }
 
-.paiContent {
+.fullHeight {
+  height: 100%;
+}
+
+.bottomSpace {
   padding-bottom: 2rem;
 }

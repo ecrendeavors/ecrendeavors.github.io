@@ -7,13 +7,37 @@ import {
   CardDeck,
   Row,
   Col,
-  Button
+  Button,
+  Modal
 } from "react-bootstrap";
 
-export class HomePage extends React.Component {
+interface HomePageState {
+  showModal: boolean;
+}
+export class HomePage extends React.Component<{}, HomePageState> {
+  state = {
+    showModal: false
+  };
+
   render() {
     return (
       <div>
+        <Modal
+          show={this.state.showModal}
+          onHide={() => this.setState({ showModal: false })}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Email Our Sales Team</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            <p>
+              ecrendevors<span>@</span>
+              <span>gmail.com</span>
+            </p>
+          </Modal.Body>
+        </Modal>
+
         <Jumbotron fluid>
           <Container>
             <h1>Happy Customer, Happy Business</h1>
@@ -22,53 +46,67 @@ export class HomePage extends React.Component {
               need to do is bring the food.
             </p>
             <p>
-              <Button variant="primary">Get in touch!</Button>
+              <Button
+                variant="primary"
+                onClick={() => this.setState({ showModal: true })}
+              >
+                Get in touch!
+              </Button>
             </p>
           </Container>
         </Jumbotron>
-        <div className="container">
-          <h5>
-            Pai Now is designed with all parts of the food ordering process in
-            mind
-          </h5>
+        <div className="container bottomSpace">
+          <p>
+            <h5>
+              Pai Now is designed with all parts of the food ordering process in
+              mind.
+            </h5>
+          </p>
           <Row>
             <Col xs="12" md="4">
-              <Card>
+              <Card className={"fullHeight"}>
                 <Card.Img variant="top" src="/images/woman-eating-pizza.jpg" />
                 <Card.Body>
                   <Card.Title>Customers</Card.Title>
                   <Card.Text>
-                    <ul>
-                      <li>Stress free ordering</li>
-                    </ul>
+                    <p>
+                      Stress free ordering - no rush, no queue. Just click and
+                      eat!
+                    </p>
+                    <p>No-stress payment - cash free and secure.</p>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col xs="12" md="4">
-              <Card>
+              <Card className={"fullHeight"}>
                 <Card.Img variant="top" src="/images/man-cooking.jpg" />
                 <Card.Body>
                   <Card.Title>Employees</Card.Title>
                   <Card.Text>
-                    <ul>
-                      <li>More time focused on service</li>
-                      <li>Less time focused on operating a POS</li>
-                    </ul>
+                    <p>
+                      More time focused on service. Less time fighting with a
+                      POS
+                    </p>
+                    <p>
+                      Easy, intuitive interface that lets your employees focus
+                      on what they do best - making customers happy
+                    </p>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col xs="12" md="4">
-              <Card>
+              <Card className={"fullHeight"}>
                 <Card.Img variant="top" src="/images/hand-pen.jpg" />
                 <Card.Body>
                   <Card.Title>Owner</Card.Title>
                   <Card.Text>
-                    <ul>
-                      <li>Lower POS overhead</li>
-                      <li>Insight into menu performance</li>
-                    </ul>
+                    <p>
+                      Reduce your overhead. Pai Now knows you want to spend your
+                      money on keeping customers and employees happy, not on
+                      expensive harware and high margin transaction costs
+                    </p>
                   </Card.Text>
                 </Card.Body>
               </Card>

@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router";
 import { BrowserRouter, Link } from "react-router-dom";
 
 import { HomePage } from "./pages/home";
+import { Footer } from "./components/Footer";
 // import { Contact } from "./pages/contact";
 
 import "./App.css";
@@ -23,12 +24,13 @@ class App extends Component {
               </Nav.Link> */}
             </Nav>
           </Navbar>
-          <div className="paiContent">
+          <div>
             <Switch>
               <Route exact path="/" component={HomePage} />
               {/* <Route exact path="/contact" component={Contact} /> */}
             </Switch>
           </div>
+          <Footer />
         </div>
       </BrowserRouter>
     );

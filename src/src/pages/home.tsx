@@ -38,12 +38,16 @@ export class HomePage extends React.Component<{}, HomePageState> {
           </Modal.Body>
         </Modal>
 
-        <Jumbotron fluid>
+        <Jumbotron fluid className={"hero-banner"}>
           <Container>
             <h1>Happy Customer, Happy Business</h1>
             <p>
-              We'll give you the ideal customer ordering experience. All you
-              need to do is bring the food.
+              We'll handle all the transaction workflows. You just do what you
+              do best, serving the customers.
+            </p>
+            <p>
+              Pai 排 Now is designed with the end to end ordering process in
+              mind.
             </p>
             <p>
               <Button
@@ -85,8 +89,7 @@ export class HomePage extends React.Component<{}, HomePageState> {
                   <Card.Title>Employees</Card.Title>
                   <Card.Text>
                     <p>
-                      More time focused on service. Less time fighting with a
-                      POS
+                      More time to focus on service. Less time managing the POS
                     </p>
                     <p>
                       Easy, intuitive interface that lets your employees focus
@@ -103,9 +106,9 @@ export class HomePage extends React.Component<{}, HomePageState> {
                   <Card.Title>Owner</Card.Title>
                   <Card.Text>
                     <p>
-                      Reduce your overhead. Pai Now knows you want to spend your
-                      money on keeping customers and employees happy, not on
-                      expensive harware and high margin transaction costs
+                      Reduce overheads. Pai Now is the new end to end solution
+                      for business owners. No more expensive hardware and high
+                      transaction fees.
                     </p>
                   </Card.Text>
                 </Card.Body>

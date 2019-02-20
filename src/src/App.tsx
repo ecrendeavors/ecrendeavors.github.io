@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Navbar bg="dark" variant="dark">
+          <Navbar className={"nav"}>
             <Navbar.Brand>Pai Now</Navbar.Brand>
             <Nav className="mr-auto" />
             <Nav>

@@ -47,3 +47,20 @@ a:hover {
 .bottomSpace {
   padding-bottom: 2rem;
 }
+
+.hero-banner {
+  background-image: url("/images/man-cooking-food.jpg");
+  background-size: cover;
+  color: white;
+  padding-top: 112px;
+}
+
+.nav {
+  background-color: rgba(52, 58, 64, 0.6);
+  width: 100vw;
+  position: absolute;
+}
+
+.nav .navbar-brand {
+  color: white;
+}

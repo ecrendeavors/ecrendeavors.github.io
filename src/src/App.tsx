@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router";
 import { BrowserRouter, Link } from "react-router-dom";
 
 import { HomePage } from "./pages/home";
+import { PreRelease } from "./pages/prerelease";
 import { Footer } from "./components/Footer";
 // import { Contact } from "./pages/contact";
 
@@ -27,6 +28,8 @@ class App extends Component {
           <div>
             <Switch>
               <Route exact path="/" component={HomePage} />
+              <Route exact path="/privacy" component={PreRelease} />
+              <Route exact path="/tos" component={PreRelease} />
               {/* <Route exact path="/contact" component={Contact} /> */}
             </Switch>
           </div>
